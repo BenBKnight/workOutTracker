@@ -1,0 +1,1 @@
+module.exports = mongoose.model('workout.js', workout)
