@@ -1,1 +1,3 @@
-module.exports = mongoose.model('workout.js', workout)
+module.exports = {
+    WorkOut: require("./workout")
+};
