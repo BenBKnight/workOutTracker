@@ -35,6 +35,7 @@ function generatePalette() {
 function populateChart(data) {
     let durations = duration(data);
     let pounds = calculateTotalWeight(data);
+    console.log(pounds)
     let workouts = workoutNames(data);
     const colors = generatePalette();
 
@@ -173,8 +174,6 @@ function populateChart(data) {
 
 function duration(data) {
     let durations = [];
-    console.log(data)
-
     data.forEach(workout => {
         workout.exercises.forEach(exercise => {
             durations.push(exercise.duration);

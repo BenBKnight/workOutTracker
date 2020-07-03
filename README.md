@@ -1,8 +1,23 @@
-# workOutTracker
+## Fitness Tracker
+  ****
+  ### Description
+  Fitness tracking application that utilizes MongoDB to track and record user workouts.
+  
+  ### Installation
+  Utilize npm install to install node packages
+  ```
+ npm i 
+```
+  ### Usage
+  Rund node server.js for local usage, or deployed appilication.
+  ```
+ node server.js 
+```
 
-- 02-Stu-Create-Inser-and-Find
-- 04-Stu-Update-Delete-and-Drop
-- 11-Stu-Mongoose-Schema
-- 15-Stu-Populate
-  (From week 11-express)
-- 11-express:15-HotRestaurant
+  ### License ![License](https://img.shields.io/badge/License-MIT-blue)
+  
+  ### Contributing
+  Ben Knight - Backend, Trilogy - Front end
+  
+
+  
