@@ -18,20 +18,20 @@ const WorkOutSchema = new Schema({
             require: true
         },
         distance: {
-            type: String,
+            type: Number,
         },
         duration: {
-            type: String,
+            type: Number,
             require: true
         },
         weight: {
-            type: String
+            type: Number
         },
         sets: {
-            type: String
+            type: Number
         },
         reps: {
-            type: String
+            type: Number
         }
     }]
 });

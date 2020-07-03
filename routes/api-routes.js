@@ -26,15 +26,12 @@ router.get("/api/workouts", (req, res) => {
 });
 
 router.put("/api/workouts/:id", (req, res) => {
-    // console.log(req)
-    console.log("hit route page");
-    console.log(req.body);
-    console.log(req.params.id)
-        // console.log(res)
-    db.WorkOut.findOneAndUpdate(req.params.id, { $push: { exercises: req.body } }, { new: true, runValidators: true })
+    console.log(req.params, req.body)
+    db.WorkOut.findOneAndUpdate({ _id: req.params.id }, { $push: { exercises: req.body } }, { new: true })
         .then(result => {
-            res.json(result);
             console.log(result)
+
+            res.json(result);
         })
         .catch((err) => {
             console.error(err)
@@ -44,29 +41,17 @@ router.put("/api/workouts/:id", (req, res) => {
 
 router.put("/api/workouts", (req, res) => {
     db.WorkOut.create(req).then(result => {
-            res.json(result);
-        })
+        res.json(result);
+    })
         .catch((err) => {
             res.status(401).json(err)
         });
 });
 
-router.get("/?id=", (req, res) => {
-    db.WorkOut.findOne().then(result => {
-            console.log(req.params.id)
-            console.log(req)
-            res.json.send(result);
-        })
-        .catch((err) => res.status(401).json(err));
-});
-
 router.get("/api/workouts/range", (req, res) => {
-    console.log("hit route")
-
     db.WorkOut.find({}).then(result => {
-            console.log(result)
-            res.json(result);
-        })
+        res.json(result);
+    })
         .catch((err) => res.status(401).json(err));
 });
 
